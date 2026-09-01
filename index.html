@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b14">
+  <title>Evolución de los dispositivos móviles · 1950–2028</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+
+  <header class="hero" id="inicio">
+    <nav class="topbar">
+      <div class="brand">MOBILE<span>TIME</span></div>
+      <div class="top-actions">
+        <button id="soundBtn" class="icon-btn" title="Activar/desactivar sonido">🔊 <span>Sonido</span></button>
+        <button id="playBtn" class="icon-btn primary" title="Recorrido automático">▶ <span>Recorrer</span></button>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow">LÍNEA DEL TIEMPO INTERACTIVA</p>
+      <h1>Evolución de los<br><span>dispositivos móviles</span></h1>
+      <p class="hero-copy">De la radiotelefonía vehicular a los smartphones con inteligencia artificial, conectividad 5G y comunicación satelital.</p>
+      <div class="hero-stats">
+        <div><b id="eventCount">100</b><small>acontecimientos</small></div>
+        <div><b>78</b><small>años de evolución</small></div>
+        <div><b>1950–2028</b><small>periodo analizado</small></div>
+      </div>
+      <a class="start-btn" href="#explorar">Explorar la historia ↓</a>
+    </div>
+
+    <div class="phone-art" aria-hidden="true">
+      <div class="phone">
+        <div class="speaker"></div>
+        <div class="screen">
+          <span class="signal">▮▮▮▮</span>
+          <div class="screen-year" id="heroYear">1950</div>
+          <small>→ 2028</small>
+        </div>
+        <div class="home"></div>
+      </div>
+    </div>
+  </header>
+
+  <main id="explorar">
+    <section class="controls-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">EXPLORA</p>
+          <h2>Viaja por la historia móvil</h2>
+        </div>
+        <p>Haz clic en cualquier acontecimiento para conocer su explicación y su importancia.</p>
+      </div>
+
+      <div class="toolbar">
+        <label class="search">
+          <span>⌕</span>
+          <input id="searchInput" type="search" placeholder="Buscar: iPhone, 5G, cámara, Android…">
+        </label>
+        <select id="categorySelect" aria-label="Filtrar por categoría">
+          <option value="Todas">Todas las categorías</option>
+        </select>
+      </div>
+
+      <div id="decadeNav" class="decade-nav" aria-label="Navegación por décadas"></div>
+
+      <div class="counter-row">
+        <span id="resultCount">100 acontecimientos</span>
+        <button id="resetBtn" class="text-btn">Restablecer filtros</button>
+      </div>
+    </section>
+
+    <section class="timeline-shell">
+      <div class="timeline-progress"><div id="progressBar"></div></div>
+      <div id="timeline" class="timeline"></div>
+      <div id="emptyState" class="empty hidden">
+        <div>🔎</div>
+        <h3>No encontramos acontecimientos</h3>
+        <p>Prueba otra palabra o restablece los filtros.</p>
+      </div>
+    </section>
+
+    <section class="legend">
+      <div class="legend-card">
+        <span class="legend-icon">✓</span>
+        <div><b>Hechos históricos</b><p>Los acontecimientos hasta 2026 se presentan como hitos históricos o tendencias ya observables.</p></div>
+      </div>
+      <div class="legend-card future-card">
+        <span class="legend-icon">◇</span>
+        <div><b>Proyecciones 2027–2028</b><p>Los sucesos futuros están marcados como proyecciones, no como hechos consumados.</p></div>
+      </div>
+    </section>
+
+    <section class="sources">
+      <p class="eyebrow">FUENTES BASE</p>
+      <h2>Referencias consultadas</h2>
+      <div class="sources-grid">
+        <a href="https://www.motorolasolutions.com/en_us/about/history/timeline.html" target="_blank" rel="noopener">Motorola Solutions · Historia</a>
+        <a href="https://www.motorolasolutions.com/en_xl/about/history/explore-motorola-heritage/cell-phone-development.html" target="_blank" rel="noopener">Motorola · Desarrollo del celular</a>
+        <a href="https://www.gsma.com/about-us/who-we-are/our-history/" target="_blank" rel="noopener">GSMA · Historia de GSM</a>
+        <a href="https://www.vodafone.com/news/newsroom/technology/25-anniversary-text-message" target="_blank" rel="noopener">Vodafone · Primer SMS</a>
+        <a href="https://www.apple.com/newsroom/2007/01/09Apple-Reinvents-the-Phone-with-iPhone/" target="_blank" rel="noopener">Apple · Presentación del iPhone</a>
+        <a href="https://www.apple.com/newsroom/2007/06/28iPhone-Premieres-This-Friday-Night-at-Apple-Retail-Stores/" target="_blank" rel="noopener">Apple · Lanzamiento del iPhone</a>
+        <a href="https://www.3gpp.org/" target="_blank" rel="noopener">3GPP · Estándares móviles</a>
+        <a href="https://about.att.com/sites/labs/our-legacy" target="_blank" rel="noopener">AT&T Labs · Historia tecnológica</a>
+      </div>
+      <p class="source-note">Nota académica: para hitos antiguos cuya documentación pública suele registrar solo año o mes, la interfaz muestra esa precisión en lugar de inventar un día.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div><b>Evolución de los dispositivos móviles</b><span>1950–2028</span></div>
+    <p>Proyecto académico · Línea del tiempo interactiva</p>
+  </footer>
+
+  <dialog id="eventModal">
+    <button id="closeModal" class="close-btn" aria-label="Cerrar">×</button>
+    <div class="modal-visual">
+      <span id="modalIcon">📱</span>
+      <div class="pulse-ring"></div>
+    </div>
+    <div class="modal-content">
+      <div class="modal-meta">
+        <span id="modalDate"></span>
+        <span id="modalCategory"></span>
+      </div>
+      <h2 id="modalTitle"></h2>
+      <h3>¿Qué ocurrió?</h3>
+      <p id="modalDesc"></p>
+      <h3>¿Por qué fue importante?</h3>
+      <p id="modalImportance"></p>
+      <div id="futureWarning" class="future-warning hidden">🔮 Este acontecimiento es una proyección futura, no un hecho histórico confirmado.</div>
+      <div class="modal-nav">
+        <button id="prevEvent">← Anterior</button>
+        <span id="modalPosition"></span>
+        <button id="nextEvent">Siguiente →</button>
+      </div>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
